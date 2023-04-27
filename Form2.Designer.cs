@@ -134,6 +134,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.Text = "Ets2dlcedit/2";
             this.ResumeLayout(false);

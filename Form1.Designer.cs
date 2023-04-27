@@ -93,6 +93,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Ets2dlcedit";
             this.ResumeLayout(false);

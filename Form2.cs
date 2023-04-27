@@ -62,9 +62,8 @@ namespace etsdlcedit
                 MessageBox.Show("Karar dosyası yok.");
                 return;
             }
-        MessageBox.Show("Dosyalar başarıyla taşındı.");
         }
-        public void tasima(string kaynak,string hedef)
+        public void tasima(string kaynak, string hedef)
         {
             var selectedItems = checkedListBox1.CheckedItems;
             foreach (var selectedItem in selectedItems)
@@ -74,55 +73,64 @@ namespace etsdlcedit
                     case "İtalya":
                         string file = "dlc_it.scs";
                         string sourceFile = Path.Combine(kaynak, file);
-                        File.Move(sourceFile, hedef);
+                        string destFile = Path.Combine(hedef, file);
+                        File.Move(sourceFile, destFile);
                         progressBar1.Value++;
                         break;
                     case "Fransa":
                         string file2 = "dlc_fr.scs";
                         string sourceFile2 = Path.Combine(kaynak, file2);
-                        File.Move(sourceFile2, hedef);
+                        string destFile2 = Path.Combine(hedef, file2);
+                        File.Move(sourceFile2, destFile2);
                         progressBar1.Value++;
                         break;
                     case "Going East (Polonya Çek Cumhuriyeti Slovakya Macaristan)":
                         string file3 = "dlc_east.scs";
                         string sourceFile3 = Path.Combine(kaynak, file3);
-                        File.Move(sourceFile3, hedef);
+                        string destFile3 = Path.Combine(hedef, file3);
+                        File.Move(sourceFile3, destFile3);
                         progressBar1.Value++;
                         break;
                     case "Road The Black Sea (Romanya Bulgaristan Turkiye)":
                         string file4 = "dlc_balkan_e.scs";
                         string sourceFile4 = Path.Combine(kaynak, file4);
-                        File.Move(sourceFile4, hedef);
+                        string destFile4 = Path.Combine(hedef, file4);
+                        File.Move(sourceFile4, destFile4);
                         progressBar1.Value++;
                         break;
                     case "Baltic Sea (Estonya Letonya Litvanya Finlandiya Rusya)":
                         string file5 = "dlc_balt.scs";
                         string sourceFile5 = Path.Combine(kaynak, file5);
-                        File.Move(sourceFile5, hedef);
+                        string destFile5 = Path.Combine(hedef, file5);
+                        File.Move(sourceFile5, destFile5);
                         progressBar1.Value++;
                         break;
                     case "Iberia (Ispanya Portekiz)":
                         string file6 = "dlc_iberia.scs";
                         string sourceFile6 = Path.Combine(kaynak, file6);
-                        File.Move(sourceFile6, hedef);
+                        string destFile6 = Path.Combine(hedef, file6);
+                        File.Move(sourceFile6, destFile6);
                         progressBar1.Value++;
                         break;
                     case "Iskandinavya(Norveç Isveç Danimarka)":
                         string file7 = "dlc_north.scs";
                         string sourceFile7 = Path.Combine(kaynak, file7);
-                        File.Move(sourceFile7, hedef);
+                        string destFile7 = Path.Combine(hedef, file7);
+                        File.Move(sourceFile7, destFile7);
                         progressBar1.Value++;
                         break;
                     case "Krone":
                         string file8 = "dlc_krone.scs";
                         string sourceFile8 = Path.Combine(kaynak, file8);
-                        File.Move(sourceFile8, hedef);
+                        string destFile8 = Path.Combine(hedef, file8);
+                        File.Move(sourceFile8, destFile8);
                         progressBar1.Value++;
                         break;
                     case "Reno modifiye":
                         string file9 = "dlc_renault_t_tuning.scs";
                         string sourceFile9 = Path.Combine(kaynak, file9);
-                        File.Move(sourceFile9, hedef);
+                        string destFile9 = Path.Combine(hedef, file9);
+                        File.Move(sourceFile9, destFile9);
                         progressBar1.Value++;
                         break;
                     default:
@@ -133,5 +141,4 @@ namespace etsdlcedit
             Process.Start("explorer.exe", hedef);
         }
     }
-
 }

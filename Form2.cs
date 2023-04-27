@@ -165,7 +165,6 @@ namespace etsdlcedit
         {
             if (!first7Selected)
             {
-                // CheckListBox'taki ilk 7 öğeyi işaretle.
                 for (int i = 0; i < 7; i++)
                 {
                     checkedListBox1.SetItemChecked(i, true);
@@ -174,13 +173,17 @@ namespace etsdlcedit
             }
             else
             {
-                // CheckListBox'taki ilk 7 öğenin işaretini kaldır.
                 for (int i = 0; i < 7; i++)
                 {
                     checkedListBox1.SetItemChecked(i, false);
                 }
                 first7Selected = false;
             }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            textBox1.ReadOnly = true;
         }
     }
 }

@@ -43,5 +43,11 @@ namespace etsdlcedit
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox1.ReadOnly = true;
+            textBox2.ReadOnly = true;
+        }
     }
 }

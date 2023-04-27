@@ -140,5 +140,47 @@ namespace etsdlcedit
             Process.Start("explorer.exe", kaynak);
             Process.Start("explorer.exe", hedef);
         }
+        private bool first7Selected = false; 
+        private bool allSelected = false;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!allSelected)
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, true);
+                }
+                allSelected = true;
+            }
+            else
+            {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                }
+                allSelected = false;
+            }
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (!first7Selected)
+            {
+                // CheckListBox'taki ilk 7 öğeyi işaretle.
+                for (int i = 0; i < 7; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, true);
+                }
+                first7Selected = true;
+            }
+            else
+            {
+                // CheckListBox'taki ilk 7 öğenin işaretini kaldır.
+                for (int i = 0; i < 7; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                }
+                first7Selected = false;
+            }
+        }
     }
 }

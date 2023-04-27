@@ -55,7 +55,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 250);
+            this.textBox2.Location = new System.Drawing.Point(40, 256);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(360, 100);
@@ -85,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(440, 460);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);

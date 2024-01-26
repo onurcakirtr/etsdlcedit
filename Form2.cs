@@ -21,6 +21,12 @@ namespace etsdlcedit
         public Form2()
         {
             InitializeComponent();
+
+            if (File.Exists(karar))
+            {
+                string klasorYolu = File.ReadAllText(karar);
+                textBox1.Text = klasorYolu;
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,7 +42,7 @@ namespace etsdlcedit
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             progressBar1.Minimum = 0;
             progressBar1.Maximum = checkedListBox1.CheckedItems.Count;
             progressBar1.Value = 0;
@@ -48,7 +54,7 @@ namespace etsdlcedit
                 {
                     string kaynak = File.ReadAllText(kuruluyer);
                     string hedef = File.ReadAllText(tasincakyer);
-                    tasima(kaynak, hedef); 
+                    tasima(kaynak, hedef);
                 }
                 if (karar1 == "Konvoy Sonrası")
                 {
@@ -119,18 +125,25 @@ namespace etsdlcedit
                         File.Move(sourceFile7, destFile7);
                         progressBar1.Value++;
                         break;
-                    case "Krone":
-                        string file8 = "dlc_krone.scs";
+                    case "Batı Balkanlar (West Balkans)":
+                        string file8 = "dlc_balkan_w.scs";
                         string sourceFile8 = Path.Combine(kaynak, file8);
                         string destFile8 = Path.Combine(hedef, file8);
                         File.Move(sourceFile8, destFile8);
                         progressBar1.Value++;
                         break;
-                    case "Reno modifiye":
-                        string file9 = "dlc_renault_t_tuning.scs";
+                    case "Krone":
+                        string file9 = "dlc_krone.scs";
                         string sourceFile9 = Path.Combine(kaynak, file9);
                         string destFile9 = Path.Combine(hedef, file9);
                         File.Move(sourceFile9, destFile9);
+                        progressBar1.Value++;
+                        break;
+                    case "Reno modifiye":
+                        string file10 = "dlc_renault_t_tuning.scs";
+                        string sourceFile10 = Path.Combine(kaynak, file10);
+                        string destFile10 = Path.Combine(hedef, file10);
+                        File.Move(sourceFile10, destFile10);
                         progressBar1.Value++;
                         break;
                     default:
@@ -140,7 +153,7 @@ namespace etsdlcedit
             Process.Start("explorer.exe", kaynak);
             Process.Start("explorer.exe", hedef);
         }
-        private bool first7Selected = false; 
+        private bool first7Selected = false;
         private bool allSelected = false;
         private void button4_Click(object sender, EventArgs e)
         {
@@ -165,7 +178,7 @@ namespace etsdlcedit
         {
             if (!first7Selected)
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     checkedListBox1.SetItemChecked(i, true);
                 }
@@ -173,7 +186,7 @@ namespace etsdlcedit
             }
             else
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     checkedListBox1.SetItemChecked(i, false);
                 }
